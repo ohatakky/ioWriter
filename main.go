@@ -1,10 +1,9 @@
 package main
 
 import (
-	"ioWriter/m"
+	"ioWriter/f"
 )
 
 func main() {
-	// m.StrByte()
-	m.Slice()
+	f.OutputFile()
 }
