@@ -12,15 +12,16 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Encoding", "gzip")
 	w.Header().Set("Content-Type", "application/json")
 
+	gw := gzip.NewWriter(w)
+	defer gw.Flush()
+
+	mw := io.MultiWriter(gw, os.Stdout)
+
+	je := json.NewEncoder(mw)
+	je.SetIndent("", "	")
 	source := map[string]string{
 		"sample": "data",
 	}
-
-	gw := gzip.NewWriter(w)
-	defer gw.Flush()
-	mw := io.MultiWriter(gw, os.Stdout)
-	je := json.NewEncoder(mw)
-	je.SetIndent("", "	")
 	je.Encode(source)
 }
 
