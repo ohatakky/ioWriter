@@ -17,11 +17,11 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	mw := io.MultiWriter(gw, os.Stdout)
 
-	je := json.NewEncoder(mw)
-	je.SetIndent("", "	")
 	source := map[string]string{
 		"sample": "data",
 	}
+	je := json.NewEncoder(mw)
+	je.SetIndent("", "	")
 	je.Encode(source)
 }
 
