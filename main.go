@@ -6,6 +6,7 @@ import (
 
 func main() {
 	f.OutputFile()
-
 	f.StdoutWrite()
+
+	f.BufferWrite()
 }
