@@ -8,4 +8,8 @@ syscall.Write()：OSのシステムコールを呼ぶ。OSはファイルディ�
 
 OSは可能な限り様々なものをファイルとして抽象化しようとする。Windowsだとソケットはファイルとして扱えない、等の差異はある。Go言語はOS間の差異を吸収するために、言語レベルで整備する。
 
+io.Writerはインタフェース
 
+func (f *File) Write(b []byte) (n int, err error) 
+
+os/file.goに定義されているFile型の構造体へのポインタに対するメソッド
