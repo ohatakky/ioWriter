@@ -11,6 +11,7 @@ func main() {
 	// f.NetWrite()
 	// f.HttpWrite()
 	// f.Decorator()
+	// f.GzipWrite()
 
-	f.GzipWrite()
+	f.JsonEncoderWrite()
 }
