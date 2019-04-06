@@ -2,7 +2,8 @@ package m
 
 import "fmt"
 
-func strByte() {
+// StrByte is func
+func StrByte() {
 	str := "string"
 	bstr := []byte(str)
 	fmt.Println(str)
