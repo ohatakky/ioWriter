@@ -8,8 +8,9 @@ func main() {
 	// f.OutputFile()
 	// f.StdoutWrite()
 	// f.BufferWrite()
-
 	// f.NetWrite()
 	// f.HttpWrite()
-	f.Decorator()
+	// f.Decorator()
+
+	f.GzipWrite()
 }
