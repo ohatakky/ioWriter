@@ -10,5 +10,6 @@ func main() {
 	// f.BufferWrite()
 
 	// f.NetWrite()
-	f.HttpWrite()
+	// f.HttpWrite()
+	f.Decorator()
 }
