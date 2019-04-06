@@ -5,8 +5,10 @@ import (
 )
 
 func main() {
-	f.OutputFile()
-	f.StdoutWrite()
+	// f.OutputFile()
+	// f.StdoutWrite()
+	// f.BufferWrite()
 
-	f.BufferWrite()
+	// f.NetWrite()
+	f.HttpWrite()
 }
