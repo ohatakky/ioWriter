@@ -6,4 +6,6 @@ import (
 
 func main() {
 	f.OutputFile()
+
+	f.StdoutWrite()
 }
